@@ -4,4 +4,6 @@
     <string name="title">Title</string>
     <string name="update">UPDATE</string>
     <string name="clear">CLEAR</string>
+    <string name="fname">FIRST_NAME</string>
+    <string name="tittle">TITTLE</string>
 </resources>
