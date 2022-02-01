@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mvm</string>
+    <string name="username">username</string>
+    <string name="title">Title</string>
+    <string name="update">UPDATE</string>
+    <string name="clear">CLEAR</string>
+</resources>

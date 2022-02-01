@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="myListView"
+            type="com.example.mvm.SubViewModel" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:inputType="text"
+        android:layout_margin="30dp"
+        android:hint="@string/username"
+        android:text="@={myListView.username}"
+        tools:ignore="Autofill" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/title"
+        android:id="@+id/title"
+        android:text="@={myListView.tittle}"
+        android:layout_margin="30dp"
+        android:inputType="text"
+        tools:ignore="Autofill" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+              android:onClick="@{()->myListView.saveOrUpdate()}"
+            android:text="@string/update"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:onClick="@{()->myListView.deleteOrClearAll()}"
+            android:text="@string/clear"
+            tools:ignore="ButtonStyle" />
+
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/recycle"/>
+
+
+    </LinearLayout>
+</layout>
+
+
+
+
